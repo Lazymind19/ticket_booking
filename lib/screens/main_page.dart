@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_booking_app/screens/home_page.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -12,19 +14,19 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
   static final List<Widget> _widgets = <Widget>[
-    const Text("Home"),
+    HomePage(),
     const Text("Search"),
     const Text("Ticket"),
     const Text("Profile"),
-
   ];
 
-  void _onItemTapped(int index){
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
       log("Selected index is $_selectedIndex");
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,16 +46,20 @@ class _MainPageState extends State<MainPage> {
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
         items: const [
-          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_home_add_regular),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_home_add_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
               label: "Home"),
-          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
               label: "Search"),
-          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
               label: "Ticket"),
-          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_people_regular),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_people_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_people_filled),
               label: "Profile"),
         ],
