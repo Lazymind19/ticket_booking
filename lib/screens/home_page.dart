@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_booking_app/utils/app_style.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.grey.withOpacity(0.1),
+      backgroundColor:Styles.backgroundColor,
       body: ListView(
         children: [
           Container(
