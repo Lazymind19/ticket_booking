@@ -85,7 +85,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Gap(10),
-          TicketView(),
+          SingleChildScrollView(
+            padding: EdgeInsets.only(left: 20),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                TicketView(),
+                TicketView(),
+              ],
+            ),
+          ),
         ],
       ),
     );
