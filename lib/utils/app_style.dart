@@ -8,7 +8,7 @@ class Styles{
   static TextStyle textStyle = TextStyle(fontSize: 16, color: primaryTextColor, fontWeight: FontWeight.w500);
   static TextStyle headLineStyle = TextStyle(fontSize: 25, color: primaryTextColor, fontWeight: FontWeight.bold);
   static TextStyle headLineStyle2 = TextStyle(fontSize: 20, color: primaryTextColor, fontWeight: FontWeight.bold);
-  static TextStyle headLineStyle3 = TextStyle(fontSize: 17, color: primaryTextColor, fontWeight: FontWeight.w500);
+  static TextStyle headLineStyle3 = TextStyle(fontSize: 17, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
   static TextStyle headLineStyle4 = TextStyle(fontSize: 14, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
 
 }
