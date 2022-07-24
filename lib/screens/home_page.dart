@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_booking_app/screens/hotel_screen.dart';
 import 'package:ticket_booking_app/screens/ticket_view.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
-                const Gap(40),
+                const Gap(20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -71,7 +72,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Gap(40),
+                const Gap(20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -95,6 +96,32 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          Gap(5),
+          Container(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Hotels", style: Styles.headLineStyle2 .copyWith(color: Colors.black),),
+                InkWell(
+                  onTap: (){},
+                  child: Text("View all", style: Styles.headLineStyle4,),
+                )
+              ],
+            ),
+          ),
+          Gap(10),
+         SingleChildScrollView(
+           scrollDirection: Axis.horizontal,
+           child: Row(
+             children: [
+               HotelScreen(),
+               HotelScreen(),
+               HotelScreen(),
+               HotelScreen()
+             ],
+           ),
+         )
         ],
       ),
     );
