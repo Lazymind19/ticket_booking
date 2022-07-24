@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/screens/home_page.dart';
+import 'package:ticket_booking_app/screens/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -12,10 +13,10 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   static final List<Widget> _widgets = <Widget>[
     HomePage(),
-    const Text("Search"),
+    SearchPage(),
     const Text("Ticket"),
     const Text("Profile"),
   ];
