@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 import 'package:ticket_booking_app/widgets/icon_text_container.dart';
+import 'package:ticket_booking_app/widgets/ticket_tabs.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -22,45 +23,7 @@ class SearchPage extends StatelessWidget {
             style: Styles.headLineStyle
                 .copyWith(fontSize: 35, color: Colors.black),
           ),
-          FittedBox(
-            child: Container(
-              decoration: BoxDecoration(),
-              child: Row(
-                children: [
-                  /*
-                  * AirTickets*/
-                  Container(
-                      width: size.width * 0.44,
-                      padding:
-                          EdgeInsets.symmetric(vertical: 7, horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.horizontal(left: Radius.circular(20)),
-                        color: Colors.white,
-                      ),
-                      child: Text(
-                        "AirTickets",
-                        style:
-                            Styles.headLineStyle4.copyWith(color: Colors.black),
-                      )),
-                  Container(
-                      width: size.width * 0.44,
-                      padding:
-                          EdgeInsets.symmetric(vertical: 7, horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.horizontal(right: Radius.circular(20)),
-                        color: Colors.white38,
-                      ),
-                      child: Text(
-                        "Hotels",
-                        style:
-                            Styles.headLineStyle4.copyWith(color: Colors.black),
-                      )),
-                ],
-              ),
-            ),
-          ),
+          TicketTabs(textOne: "AirTickets", textTwo: "Hotels"),
           Gap(20),
           /*
           * Departure*/
