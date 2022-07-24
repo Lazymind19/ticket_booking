@@ -3,14 +3,15 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 class HotelScreen extends StatelessWidget {
-  const HotelScreen({Key? key}) : super(key: key);
+  final Map<String, dynamic> hotels;
+  const HotelScreen({Key? key, required this.hotels}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width*0.6,
-      height: 300,
+      height: 280,
       margin: const EdgeInsets.all(20),
       padding: const EdgeInsets.symmetric(horizontal:15, vertical: 15),
       decoration: BoxDecoration(
@@ -34,16 +35,16 @@ class HotelScreen extends StatelessWidget {
               color: Styles.primaryColor,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("img/welcome-three.jpg")
+                image: AssetImage("img/${hotels['image']}")
               )
             ),
           ),
           Gap(10),
-          Text("Open Space",style: Styles.headLineStyle2.copyWith(color: Colors.white38),),
+          Text(hotels['place'],style: Styles.headLineStyle2.copyWith(color: Colors.white38),),
           Gap(5),
-          Text("London",style: Styles.headLineStyle3.copyWith(color: Colors.white),),
+          Text(hotels['destination'],style: Styles.headLineStyle3.copyWith(color: Colors.white),),
           Gap(10),
-          Text("\$50/Night",style: Styles.headLineStyle.copyWith(color: Colors.white38),)
+          Text("\$${hotels['price']}/night".toString(),style: Styles.headLineStyle.copyWith(color: Colors.white38),)
         ],
       ),
     );

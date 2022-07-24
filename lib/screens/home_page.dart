@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/screens/hotel_screen.dart';
 import 'package:ticket_booking_app/screens/ticket_view.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
+import 'package:ticket_booking_app/utils/hotel_info_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -114,12 +115,7 @@ class HomePage extends StatelessWidget {
          SingleChildScrollView(
            scrollDirection: Axis.horizontal,
            child: Row(
-             children: [
-               HotelScreen(),
-               HotelScreen(),
-               HotelScreen(),
-               HotelScreen()
-             ],
+             children: hotelList.map((hotel) => HotelScreen(hotels: hotel)).toList(),
            ),
          )
         ],
