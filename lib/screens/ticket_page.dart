@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_booking_app/screens/ticket_view.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 import 'package:ticket_booking_app/widgets/ticket_tabs.dart';
 
@@ -26,6 +27,11 @@ class TicketPage extends StatelessWidget {
                 ),
                 Gap(20),
                 TicketTabs(textOne: "Upcoming", textTwo: "Previous"),
+                Gap(10),
+                Container(
+                  padding: EdgeInsets.only(left: 30),
+                  child: TicketView(isColor: true),
+                )
               ],
             ),
           ),
